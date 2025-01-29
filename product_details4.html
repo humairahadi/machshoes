@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="m.png">
+    <title>Products Details - Machino</title>
+    <link rel="stylesheet" href="style 2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="machshoes.png" alt="Mach Shoes Logo" width="125px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="account.html">My Account</a></li>
+                </ul>
+            </nav>
+            <img src="cart.png" alt="Cart" width="30px" height="30px" id="cartIcon" style="cursor: pointer;">
+            <img src="menu.png" class="menu-icon" alt="Menu Icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+    <!-- Single Product Detail -->
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="classicsandalbuttercream.png" alt="classicsandalbuttercream" width="100%" id="ProductImg">
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="classicsandalbuttercreme1.jpg" alt="classicsandalbuttercream" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="classicsandalbuttercreme2.jpg" alt="classicsandalbuttercream" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="classicsandalbuttercreme3.jpg" alt="classicsandalbuttercream" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="classicsandalbuttercream.png" alt="classicsandalbuttercream" width="100%" class="small-img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <p>Home / Classic Wellness</p>
+                <h1>Classic Sandal in Buttercream</h1>
+                <h4>RM270.00</h4>
+		<br>
+		<!-- Size Guide Link -->
+<p><a href="javascript:void(0)" onclick="openImage()">Size Guide</a></p>
+
+<!-- Popup Image -->
+<div id="popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center;">
+    <img id="popupImg" src="hana4.jpg" alt="Size Guide" style="max-width: 80%; max-height: 80%; border-radius: 8px;">
+    <span onclick="closeImage()" style="position: absolute; top: 20px; right: 20px; color: white; font-size: 30px; cursor: pointer;">&times;</span>
+</div>
+
+                <select>
+                    <option>Select Size</option>
+                    <option>3UK</option>
+                    <option>4UK</option>
+                    <option>5UK</option>
+                    <option>6UK</option>
+                    <option>7UK</option>
+                </select>
+ 		
+		<br>
+
+                <input type="number" value="1" >
+                <a href="cart.html" class="btn" onclick="addToCart('Classic Sandal in Buttercream', 270.00, 'classicsandalbuttercream.png')">Add To Cart</a>
+                <h3>Product Description <i class="fa fa-indent" style="color: brown;"></i></h3>
+                <br>
+                  <p>Elevate your footwear collection with the Classic Sandals in Buttercream—designed for the comfort of a stylish traveler. These elegant sandals feature a Biomechanical Footbed that offers optimal arch support, making them perfect for long days on the go, whether you’re sightseeing or running errands. Our midfoot arch helps with shock absorption which reduced the pressure on the heel! Crafted with a versatile cream color and a chic woven design, these sandals provide both comfort and fashion-forward appeal. Lightweight and easy to pack, they’re your ideal travel companion, blending practicality with a stylish edge that complements any outfit.</p>
+<br>
+<h3> Details </h3>
+<p>Material: 
+
+-Premium synthetic leather
+-Woven synthetic leather            </div>
+        </div>
+    </div>
+<!-------title---------!>
+	<div class="small-container">
+	<div class="row row-2">
+	<h2>Related Product</h2>
+	<p><a href="product.html">View More</p></a>
+	</div>
+	
+    <div class="small-container">
+        
+        <div class="row">
+	    <div class="col-4">
+  		<img src="hanaweavecocoa.jpg" width="250px" height="250px">
+	 	<h4><strong>Hana Weave Flats in Cocoa (Triogather)</strong></h4>
+     	  	<div class="rating">
+   		    <i class="fa fa-star"></i>
+  		    <i class="fa fa-star"></i>
+		    <i class="fa fa-star"></i>
+	 	    <i class="fa fa-star"></i>
+		    <i class="fa fa-star"></i>
+		</div>
+ 		<p>RM150.00</p>
+	   </div>
+	   <div class="col-4">
+		<img src="keenkittenwhite.jpg" width="250px" height="250px">
+	 	<h4><strong>Keen Kitten Heels in Hana White</strong></h4>
+     	  	<div class="rating">
+   		    <i class="fa fa-star"></i>
+  		    <i class="fa fa-star"></i>
+		    <i class="fa fa-star"></i>
+	 	    <i class="fa fa-star"></i>
+		    <i class="fa fa-star-half"></i>
+		</div>
+ 		<p>RM168.00</p>
+	   </div>
+            <div class="col-4">
+		<a href="product_details8.html"><img src="hauteheelsbeige.jpg" width="250px" height="250px"></a>
+	 	<h4><strong>Haute Heels in Beige</strong></h4>
+     	  	<div class="rating">
+   		    <i class="fa fa-star"></i>
+  		    <i class="fa fa-star"></i>
+		    <i class="fa fa-star"></i>
+	 	    <i class="fa fa-star-o"></i>
+		    <i class="fa fa-star-o"></i>
+		</div>
+ 		<p>RM180.00</p>
+	   </div>
+            <div class="col-4">
+		<img src="hanablushheels.jpg" width="250px" height="250px">
+	 	<h4><strong>Hana Blush Heels</strong></h4>
+     	  	<div class="rating">
+   		    <i class="fa fa-star"></i>
+  		    <i class="fa fa-star"></i>
+		    <i class="fa fa-star"></i>
+	 	    <i class="fa fa-star"></i>
+		    <i class="fa fa-star-o"></i>
+		</div>
+ 		<p>RM170.00</p>
+	   </div>
+       </div>
+        	</div>
+</div>
+<!-- Footer -->
+ <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and iOS mobile phone.</p>
+                <div class="app-logo">
+                    <img src="googleplay.jpg" alt="Google Play">
+                    <img src="appstore.png" alt="App Store">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="machshoes.png" alt="Mach Shoes Logo">
+                <p>Malaysia Number 1 Shoes Brands</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#"><img src="facebook.png" alt="Facebook" width="65px" height="40px"></a></li>
+                    <li><a href="#"><img src="x.png" alt="Twitter" width="65px" height="40px"></a></li>
+                    <li><a href="#"><img src="ig.png" alt="Instagram" width="40px" height="40px"></a></li>
+                    <li><a href="#"><img src="youtube.png" alt="YouTube" width="50px" height="40px"></a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright © Machino Malaysia 2025</p>
+    </div>
+</div>
+
+
+<!-- JS for Toggle Menu -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight === "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    <!-- JS for Product Gallery -->
+    <script>
+        var ProductImg = document.getElementById("ProductImg");
+        var SmallImgs = document.querySelectorAll(".small-img");
+
+        SmallImgs.forEach((img, index) => {
+            img.addEventListener("click", () => {
+                ProductImg.src = img.src;
+            });
+        });
+    </script>
+<script>
+    function openImage() {
+        document.getElementById('popup').style.display = 'flex';
+    }
+
+    function closeImage() {
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    document.getElementById("cartIcon").addEventListener("click", function() {
+        window.location.href = "cart.html"; // Redirects to the cart page
+    });
+
+        // Function to add product to cart
+function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || []; // Get cart or initialize empty array
+
+    // Check if the item already exists in the cart
+    let existingItem = cart.find(item => item.name === name);
+
+    if (existingItem) {
+        existingItem.quantity += 1; // Increase quantity
+    } else {
+        cart.push({ name, price, image, quantity: 1 }); // Add new product
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart
+    alert("Product added to cart!"); // Alert confirmation
+}
+
+
+</script>
+ </body>
+ </html>
+

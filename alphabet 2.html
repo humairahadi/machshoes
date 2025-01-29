@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="m.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+      <div class="navbar">
+       <div class="logo">
+	   <img src="machshoes.png" width="125px">
+       </div>
+       <nav>
+	   <ul id="MenuItems">
+	       <li><a href="index.html">Home</a></li>
+	       <li><a href="product.html">Products</a></li>
+               <li><a href="account.html">My Account</a></li>
+	   </ul>
+       </nav>
+       <img src="cart.png" width="30px" height="30px" id="cartIcon" style="cursor: pointer;">
+       <img src="menu.png" class="menu-icon" onclick="menutoggle()">
+     </div>
+     </div>
+
+    <div class="small-container">
+        <div class="row row-2">
+	    <h2>All Products - (A-Z)</h2>
+	    <select id="pageOptions" onchange="navigateToPage()">
+		<option value="product.html">Default Sorting</option>
+		<option value="alphabet.html">Sort by alphabet (A-Z)</option>
+		<option value="price.html">Sort by price</option>
+		<option value="rating.html">Sort by rating</option>
+	    </select>
+	</div>
+
+   	
+        <div class="row">
+	    <div class="col-4">
+  		<img src="dreamhanawhite.jpg" width="250px" height="250px">
+	 	<h4><strong>Dream in Hana White Flats</strong></h4>
+     	  	<div class="rating">
+   		    <i class="fa fa-star"></i>
+  		    <i class="fa fa-star"></i>
+		    <i class="fa fa-star"></i>
+	 	    <i class="fa fa-star-half"></i>
+		    <i class="fa fa-star-o"></i>
+		</div>
+ 		<p>RM158.00</p>
+	   </div>
+	   <div class="col-4">
+		<img src="hanabeige.jpg" width="250px" height="250px">
+	 	<h4><strong>Hana Beige Flats</strong></h4>
+     	  	<div class="rating">
+   		    <i class="fa fa-star"></i>
+  		    <i class="fa fa-star"></i>
+		    <i class="fa fa-star"></i>
+	 	    <i class="fa fa-star"></i>
+		    <i class="fa fa-star-o"></i>
+		</div>
+ 		<p>RM150.00</p>
+	   </div>
+            <div class="col-4">
+		<img src="hanabeigeheels.jpg" width="250px" height="250px">
+	 	<h4><strong>Hana Beige Heels</strong></h4>
+     	  	<div class="rating">
+   		    <i class="fa fa-star"></i>
+  		    <i class="fa fa-star"></i>
+		    <i class="fa fa-star"></i>
+	 	    <i class="fa fa-star"></i>
+		    <i class="fa fa-star-o"></i>
+		</div>
+ 		<p>RM170.00</p>
+	   </div>
+            <div class="col-4">
+		<img src="hanabeigespring.jpg" width="250px" height="250px">
+	 	<h4><strong>Hana Beige in Spring Flats 2.0</strong></h4>
+     	  	<div class="rating">
+   		    <i class="fa fa-star"></i>
+  		    <i class="fa fa-star"></i>
+		    <i class="fa fa-star"></i>
+	 	    <i class="fa fa-star"></i>
+		    <i class="fa fa-star-o"></i>
+		</div>
+ 		<p>RM170.00</p>
+	   </div>
+       </div>
+        <div class="row">
+            <div class="col-4">
+		<img src="hanabeltblack.jpg" width="250px" height="250px">
+	 	<h4><strong>Hana Belt Heels in Black & Taupe</strong></h4>
+     	  	<div class="rating">
+   		    <i class="fa fa-star"></i>
+  		    <i class="fa fa-star"></i>
+		    <i class="fa fa-star"></i>
+	 	    <i class="fa fa-star"></i>
+		    <i class="fa fa-star-o"></i>
+		</div>
+ 		<p>RM180.00</p>
+	   </div>
+            <div class="col-4">
+		<img src="hanabeltbrown.jpg" width="250px" height="250px">
+	 	<h4><strong>Hana Belt Heels in Brown & Beige</strong></h4>
+     	  	<div class="rating">
+   		    <i class="fa fa-star"></i>
+  		    <i class="fa fa-star"></i>
+		    <i class="fa fa-star"></i>
+	 	    <i class="fa fa-star"></i>
+		    <i class="fa fa-star-o"></i>
+		</div>
+ 		<p>RM180.00</p>
+	   </div>
+	      <div class="col-4">
+		<img src="hanablushheels.jpg" width="250px" height="250px">
+	 	<h4><strong>Hana Blush Heels</strong></h4>
+     	  	<div class="rating">
+   		    <i class="fa fa-star"></i>
+  		    <i class="fa fa-star"></i>
+		    <i class="fa fa-star"></i>
+	 	    <i class="fa fa-star"></i>
+		    <i class="fa fa-star-o"></i>
+		</div>
+ 		<p>RM170.00</p>
+	   </div>
+
+            <div class="col-4">
+		<img src="hanataupe.jpg" width="250px" height="250px">
+	 	<h4><strong>Hana Taupe Flats</strong></h4>
+     	  	<div class="rating">
+   		    <i class="fa fa-star"></i>
+  		    <i class="fa fa-star"></i>
+		    <i class="fa fa-star"></i>
+	 	    <i class="fa fa-star"></i>
+		    <i class="fa fa-star-o"></i>
+		</div>
+ 		<p>RM150.00</p>
+	   </div>
+	</div>
+	<div class="page-btn">
+	    <span><a href="alphabet.html">&larr;</a></span>
+	    <span><a href="alphabet 3.html">3</a></span>
+	    <span><a href="alphabet 4.html">4</a></span>
+	    <span><a href="alphabet 3.html">&#8594;</a></span>	
+        </div>
+      </div>
+ 
+
+    <div class="footer">
+	<div class="container">
+	    <div class="row">
+		<div class="footer-col-1">
+		     <h3>Download Our App</h3>
+		     <p>Download App for Android and iOS mobile phone.</p>
+		     <div class="app-logo">
+			 <img src="googleplay.jpg">
+			 <img src="appstore.png">
+		     </div>
+		 </div>
+	    <div class="footer-col-2">
+		<img src="machshoes.png">
+ 		<p>Malaysia Number 1 Shoes Brands</p>
+	    </div>
+	    <div class="footer-col-3">
+		<h3>Useful Links</h3>
+		<ul>
+		    <li>Coupons</li>
+		    <li>Blog Post</li>
+		    <li>Return Policy</li>
+		    <li>Join Affiliate</li>
+		</ul>
+	  </div>
+	  <div class="footer-col-4">
+	      <h3>Follow Us</h3>
+	      <ul>
+	          <li><img src="facebook.png"  width="65px" height="40px"></li>
+		  <li><img src="x.png"  width="65px" height="40px"></li>
+		  <li><img src="ig.png"  width="40px" height="40px"></li>
+		  <li><img src="youtube.png"  width="50px" height="40px"></li>
+	      </ul>
+	   </div>
+	</div>
+	<hr>
+	<p class="copyright">Copyright © Machino Malaysia 2025</p>
+     </div>
+  </div>
+ <!--------js for toggle menu------->
+     <script>
+	 var MenuItems = document.getElementById("MenuItems");
+
+	 MenuItems.style.maxHeight = "0px";
+	
+	 function menutoggle(){
+	     if(MenuItems.style.maxHeight == "0px")
+		 {
+		     MenuItems.style.maxHeight = "200px";
+		 }
+	     else
+		 {
+		     MenuItems.style.maxHeight = "0px"
+		 }
+	}
+
+
+       
+        function navigateToPage() {
+            const selectedOption = document.getElementById("pageOptions").value;
+
+            if (selectedOption) {
+                // Redirect to the selected page
+                window.location.href = selectedOption;
+            }
+        }
+   
+        document.getElementById("cartIcon").addEventListener("click", function() {
+        window.location.href = "cart.html"; // Redirects to the cart page
+    });
+
+	    </script>
+
+ </body>
+ </html>
+               			

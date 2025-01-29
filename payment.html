@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <link rel="shortcut icon" type="x-icon" href="m.png">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Payment</title>
+   <link rel="stylesheet" href="style 6.css">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container">
+
+<form action=""> <!-- Your form starts here -->
+
+<div class="row">
+
+<div class="col">
+  <h3 class="title">billing address</h3>
+
+  <div class="inputBox">
+    <span>full name :</span>
+    <input type="text" placeholder="john deo">
+  </div>
+
+  <div class="inputBox">
+    <span>email :</span>
+    <input type="email" placeholder="example@gmail.com">
+  </div>
+
+  <div class="inputBox">
+    <span>address :</span>
+    <input type="text" placeholder="room - street - locality">
+  </div>
+
+  <div class="inputBox">
+    <span>city :</span>
+    <input type="text" placeholder="pahang">
+  </div>
+
+  <div class="flex">
+    <div class="inputBox">
+      <span>state :</span>
+      <input type="text" placeholder="pekan">
+    </div>
+    <div class="inputBox">
+      <span>zip code :</span>
+      <input type="text" placeholder="123 456">
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <h3 class="title">payment</h3>
+
+  <div class="inputBox">
+    <span>cards accepted :</span>
+    <div class="payment-icons">
+      <img src="paypal.png" alt="PayPal">
+      <img src="Mastercard.png" alt="MasterCard">
+      <img src="grab.png" alt="Grab">
+      <img src="visa.png" alt="Visa">
+    </div>
+  </div>
+
+  <div class="inputBox">
+    <span>name on card :</span>
+    <input type="text" placeholder="mr. john deo">
+  </div>
+
+  <div class="inputBox">
+    <span>credit card number:</span>
+    <input type="text" placeholder="1111 2222 3333 4444">
+  </div>
+
+  <div class="inputBox">
+    <span>exp month :</span>
+    <input type="text" placeholder="january">
+  </div>
+
+  <div class="flex">
+    <div class="inputBox">
+      <span>exp year :</span>
+      <input type="number" placeholder="2025">
+    </div>
+    <div class="inputBox">
+      <span>CVV :</span>
+      <input type="text" placeholder="1233">
+    </div>
+  </div>
+</div>
+
+</div> <!-- End of row -->
+
+<input type="submit" value="Proceed to Checkout" class="submit-btn" id="checkoutBtn">
+
+</form> <!-- Close form tag -->
+
+<!-- Success Message -->
+<div id="orderSuccess" style="display: none;">
+  <h2>Your order has been placed!</h2>
+  <p>Thank you for your purchase.</p>
+</div>
+
+</div> <!-- End of container -->
+
+<script>
+  const checkoutButton = document.getElementById("checkoutBtn");
+  const orderSuccessMessage = document.getElementById("orderSuccess");
+
+  // Add event listener to the checkout button
+  checkoutButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent form submission (if any)
+
+    // Hide the form and show the success message
+    document.querySelector("form").style.display = "none"; // Hide the form
+    orderSuccessMessage.style.display = "block"; // Show the success message
+  });
+</script>
+
+</body>
+</html>

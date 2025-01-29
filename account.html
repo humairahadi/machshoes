@@ -1,0 +1,184 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<link rel="shortcut icon" type="x-icon" href="m.png">
+	<title>Account</title>
+	<link rel="stylesheet" href="style 4.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+
+	
+</head>
+<body>
+
+
+<div class="header">
+	<div class"container">
+	<div class="navbar">
+	<div class="logo">
+		<!-- Add your logo or branding here -->
+		<img src="machshoes.png" alt="Logo" width="200" >
+<p><marquee>MALAYSIA, UNITED KINGDOM, THAILAND, BRUNEI AND INDONESIA</marquee></p>
+
+
+	</div>
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<br>
+
+		</ul>
+	</nav>
+
+
+</div>
+</div>
+<!----------account-page---------->
+
+<div class="account-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-2">
+				<img src="machino3.png" width="100%">
+				</div>
+
+				<div class="col-2">
+				<div class="form-container">
+				<div class="form-btn">
+				<span onclick="login()">Login</span>
+				<span onclick="register()">Register</span>
+					<hr id="Indicator">
+					</div>
+
+			<form id="LoginForm">
+				<input type="text" placeholder="Username">
+				<input type="password" placeholder="Password">
+				<button type="submit" class="btn">Login</button><br>
+				<a href="">Forgot password</a>
+			</form>
+			
+			<form id="RegForm">
+				<input type="text" placeholder="Username">
+<br>
+				<input type="email" placeholder="Email">
+
+				<input type="password" placeholder="Password">
+				<button type="submit" class="btn">Register</button>
+
+			</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!----------js for toggle Menu---------->
+
+<script>
+
+	var MenuItems = document.getElementById("MenuItems");
+MenuItems.style.maxheight == "0px";
+
+function menutoggle(){
+if(MenuItems.style.maxHeight == "0px")
+
+{
+ MenuItems.style.maxHeight = "200px";
+}
+else
+{
+MenuItems.style.maxHeight = "0px"
+}
+}
+</script>
+
+<!----------js for toggle Form---------->
+
+<script>
+
+var LoginForm= document.getElementById("LoginForm");
+var RegForm= document.getElementById("RegForm");
+var Indicator= document.getElementById("Indicator");
+
+	function register(){
+
+RegForm.style.transform="translateX(0px)";
+LoginForm.style.transform="translateX(0px)";
+Indicator.style.transform="translateX(100px)";
+
+}
+
+function login(){
+
+RegForm.style.transform="translateX(300px)";
+LoginForm.style.transform="translateX(300px)";
+Indicator.style.transform="translateX(0px)";
+
+}
+
+
+  function goBack() {
+    window.history.back();
+  }
+
+
+
+</script>
+
+
+
+
+    <!----------footer---------->
+<div class="footer">
+	<div class="container">
+	    <div class="row">
+		<div class="footer-col-1">
+		     <h3>Download Our App</h3>
+		     <p>Download App for Android and iOS mobile phone.</p>
+		     <div class="app-logo">
+			 <img src="googleplay.jpg">
+			 <img src="appstore.png">
+		     </div>
+		 </div>
+	    <div class="footer-col-2">
+		<img src="machshoes.png">
+ 		<p>Malaysia Number 1 Shoes Brands</p>
+	    </div>
+	    <div class="footer-col-3">
+		<h3>Useful Links</h3>
+		<ul>
+		    <li>Coupons</li>
+		    <li>Blog Post</li>
+		    <li>Return Policy</li>
+		    <li>Join Affiliate</li>
+		</ul>
+	  </div>
+	  <div class="footer-col-4">
+	      <h3>Follow Us</h3>
+	      <ul>
+	          <li><img src="facebook.png"  width="65px" height="40px"></li>
+		  <li><img src="x.png"  width="65px" height="40px"></li>
+		  <li><img src="ig.png"  width="40px" height="40px"></li>
+		  <li><img src="youtube.png"  width="50px" height="40px"></li>
+	      </ul>
+	   </div>
+	</div>
+	<hr>
+	<p class="copyright">Copyright © Machino Malaysia 2025</p>
+     </div>
+  </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
