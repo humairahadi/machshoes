@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="m.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style 5.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="cart 2.js" defer></script>
+</head>
+<body>
+    <div class="container">
+      <div class="navbar">
+       <div class="logo">
+	   <img src="machshoes.png" width="125px">
+       </div>
+       <nav>
+	   <ul id="MenuItems">
+	       <li><a href="index.html">Home</a></li>
+	       <li><a href="product.html">Products</a></li>
+               <li><a href="account.html">My Account</a></li>
+	   </ul>
+       </nav>
+       <img src="cart.png" width="30px" height="30px" id="cartIcon" style="cursor: pointer;">
+       <img src="menu.png" class="menu-icon" onclick="menutoggle()">
+     </div>
+     </div>
+    <main>
+        <section class="cart-section">
+            <h1>Your Cart</h1>
+            <div class="cart-container">
+                <!-- Left: Cart Items -->
+                <div class="cart-items">
+                    <div class="cart-item">
+                    
+                      </div>
+                           </div>
+                <!-- Right: Order Summary -->
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <p>Subtotal: <span class="subtotal"></span></p>
+                    <p>Shipping: <span>Free</span></p>
+                    <p>
+                        Add Coupon Code: 
+                        <input type="text" id="couponCode" placeholder="Enter code" oninput="applyCoupon()">
+                    </p>
+                    <hr>
+                   <strong><p>Total: <span class="total"></span></p></strong>
+                    <button class="checkout-btn" onclick="goToCheckout()">Checkout</button>
+                </div>
+            </div>
+        </section>
+    </main>
+<div class="footer">
+	<div class="container">
+	    <div class="row">
+		<div class="footer-col-1">
+		     <h3>Download Our App</h3>
+		     <p>Download App for Android and iOS mobile phone.</p>
+		     <div class="app-logo">
+			 <img src="googleplay.jpg">
+			 <img src="appstore.png">
+		     </div>
+		 </div>
+	    <div class="footer-col-2">
+		<img src="machshoes.png">
+ 		<p>Malaysia Number 1 Shoes Brands</p>
+	    </div>
+	    <div class="footer-col-3">
+		<h3>Useful Links</h3>
+		<ul>
+		    <li>Coupons</li>
+		    <li>Blog Post</li>
+		    <li>Return Policy</li>
+		    <li>Join Affiliate</li>
+		</ul>
+	  </div>
+	  <div class="footer-col-4">
+	      <h3>Follow Us</h3>
+	      <ul>
+	          <li><img src="facebook.png"  width="65px" height="40px"></li>
+		  <li><img src="x.png"  width="65px" height="40px"></li>
+		  <li><img src="ig.png"  width="40px" height="40px"></li>
+		  <li><img src="youtube.png"  width="50px" height="40px"></li>
+	      </ul>
+	   </div>
+	</div>
+	<hr>
+	<p class="copyright">Copyright © Machino Malaysia 2025</p>
+     </div>
+  </div>
+
+    <script>
+    document.getElementById("cartIcon").addEventListener("click", function() {
+        window.location.href = "cart.html"; // Redirects to the cart page
+    });
+
+   // Function to display cart items
+function displayCart() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cartContainer = document.querySelector(".cart-items");
+    cartContainer.innerHTML = ""; // Clear previous content
+       
+
+    if (cart.length === 0) {
+        cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+        document.querySelector(".total").textContent = "RM0.00";
+        return;
+    }
+
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        let itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+        let itemHTML = `
+            <div class="cart-item">
+                <img src="${item.image}" alt="${item.name}" width="80">
+                <div class="item-details">
+                    <h4>${item.name}</h4>
+                    <p>RM${item.price.toFixed(2)}</p>
+                    <div class="quantity">
+                        <button onclick="updateQuantity(${index}, -1)">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="updateQuantity(${index}, 1)">+</button>
+                    </div>
+                    <p class="item-total">RM${itemTotal.toFixed(2)}</p>
+                    <button class="remove-item" onclick="removeItem(${index})">✖</button>
+                </div>
+            </div>
+        `;
+
+        cartContainer.innerHTML += itemHTML;
+    });
+
+    document.querySelector(".subtotal").textContent = `RM${total.toFixed(2)}`;
+    document.querySelector(".total").textContent = `RM${total.toFixed(2)}`;
+}
+
+// Function to update quantity
+function updateQuantity(index, change) {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    cart[index].quantity += change;
+
+    if (cart[index].quantity <= 0) {
+        cart.splice(index, 1); // Remove item if quantity is 0
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    displayCart();
+}
+
+// Function to remove an item from cart
+function removeItem(index) {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    displayCart();
+}
+
+// Function to clear cart
+function clearCart() {
+    localStorage.removeItem("cart");
+    displayCart();
+}
+
+function applyCoupon() {
+    let couponCode = document.getElementById("couponCode").value.trim();  // Get the entered coupon code
+    let subtotal = parseFloat(document.querySelector(".subtotal").textContent.replace("RM", ""));  // Get the current subtotal
+    let discount = 0;  // Default discount is 0
+
+    // Example: Apply a 10% discount for a specific coupon code
+    if (couponCode === "DISCOUNT10") {
+        discount = subtotal * 0.10;  // 10% discount
+        alert("Coupon applied: 10% off!");
+    } 
+    // Example: Apply RM20 off for another coupon code
+    else if (couponCode === "OFF20") {
+        discount = 20;  // RM20 discount
+        alert("Coupon applied: RM20 off!");
+    } 
+    
+    // Update the final total with the discount
+    let finalTotal = subtotal - discount;
+
+    // Update the total and show it in the order summary
+    document.querySelector(".total").textContent = `RM${finalTotal.toFixed(2)}`;
+    document.querySelector(".discount").textContent = `RM${discount.toFixed(2)}`;  
+}
+
+// Load cart on page load
+document.addEventListener("DOMContentLoaded", displayCart);
+
+function goToCheckout() {
+    window.location.href = "payment.html";  
+}
+
+</script>
+
+</body>
+</html>
